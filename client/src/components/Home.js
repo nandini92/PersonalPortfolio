@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import styled, {keyframes} from "styled-components";
+import { HashLink } from "react-router-hash-link";
+
+import Menu from "./Menu";
+import Skills from "./Skills";
 
 const Home = () => {
   const [name, setName] = useState();
@@ -17,17 +21,47 @@ const Home = () => {
     }, 100);
   }, [])
 
+  const scrollWithOffset = (el, yOffset) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+  };
+
   return (
     <Wrapper>
       <Content>
+        <div>
         <Heading>
           <p>
             Hi, I'm <span>{name}</span>
           </p>
           <p>I'm a full-stack developer.</p>
         </Heading>
+        <Options>
+          <Option smooth to="/#skills">
+            Skills
+          </Option>
+          <Option
+            smooth
+            to="/#projects"
+            scroll={(el) => scrollWithOffset(el, -100)}
+          >
+            Projects
+          </Option>
+          <Option
+            smooth
+            to="/#about"
+            scroll={(el) => scrollWithOffset(el, -100)}
+          >
+            About
+          </Option>
+          <Option smooth to="/#contact">
+            Contact
+          </Option>
+        </Options>
+        </div>
         <Avatar src="./assets/ProfilePic.PNG" alt="profile picture" />
       </Content>
+      <Skills />
     </Wrapper>
   );
 };
@@ -63,7 +97,24 @@ const Heading = styled.h1`
     animation:  ${textCursor} 1000ms steps(44) infinite;
   }
 `;
+const Options = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  margin: 5% 0;
+`
+const Option = styled(HashLink)`
+  color: var(--red-pantone);
+  border: 1px solid var(--red-pantone);
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  transition: all 0.35s ease-in-out;
 
+  &:hover {
+    color: var(--honeydew);
+    background-color: var(--red-pantone);
+  }
+`;
 const Avatar = styled.img`
   border-radius: 50%;
 `;
