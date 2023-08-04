@@ -5,7 +5,11 @@ const Projects = () => {
     <Wrapper>
       <Title>Projects</Title>
       <Grid>
-        {/* <Block>
+        <Block
+        style={{
+          backgroundImage: "url('./assets/Projects/PokeQuest.JPG')",
+        }}>
+          <Content>
           <h1>Poke-Quest</h1>
           <p>
             Quest is a social media application which aims to encourage
@@ -15,8 +19,17 @@ const Projects = () => {
             be anything from a request to perform a task together to an
             invitation to explore a place to simply completing chores together.
           </p>
-      </Block> */}
-        {/* <Block>
+            <Links>
+                <a href="https://poke-quest.onrender.com/" target="_blank">See Live</a>
+                <a href="https://github.com/nandini92/BootCampFinalProjects" target="_blank">Source Code</a>
+            </Links>
+          </Content>
+      </Block>
+        <Block
+          style={{
+            backgroundImage: "url('./assets/Projects/GoGoEcommerce.JPG')",
+          }}>
+          <Content>
           <h1>GoGo Ecommerce</h1>
           <p>Co-contributors: Jade Boutilier, Erez Michael</p>
           <p>
@@ -25,7 +38,11 @@ const Projects = () => {
             their previous orders. This was a group project. Technologies:
             React, Express,js, MongoDB
           </p>
-      </Block> */}
+            <Links>
+                <a href="https://github.com/nandini92/GoGo_ECommerce" target="_blank">Source Code</a>
+            </Links>
+          </Content>
+      </Block>
         <Block
           style={{
             backgroundImage: "url('./assets/Projects/ClotureCinqEtoiles.JPG')",
@@ -88,14 +105,14 @@ const Title = styled.h1`
   text-align: center;
   font-size: 3rem;
   line-height: 3.5rem;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 `;
 const Grid = styled.section`
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-gap: 5%;
 `;
 const Block = styled.div`
-  margin: 0 5%;
   background-size: cover;
   height: 100%;
 
