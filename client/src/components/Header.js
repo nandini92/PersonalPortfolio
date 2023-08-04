@@ -22,7 +22,7 @@ const Header = () => {
             <Option to={`https://github.com/nandini92`} target="blank">
               <BsGithub />
             </Option>
-            <Option>
+            <Option to={`/assets/NandiniAsokan_Resume.pdf`} target="blank">
               <HiDocumentArrowDown />
             </Option>
           </Links>
@@ -37,9 +37,10 @@ const Header = () => {
 };
 
 const Wrapper = styled.div`
+  background-color: var(--honeydew);
   position: fixed;
   z-index: 1000;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 `;

@@ -5,6 +5,8 @@ import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Projects from "./components/Projects";
+import About from "./components/About";
 
 function App() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -33,6 +35,8 @@ function App() {
             {window.screen.width > 1000 ? (
               <>
                 <Home />
+                <Projects />
+                <About />
               </>
             ) : (
               <>

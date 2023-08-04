@@ -37,9 +37,6 @@ const Home = () => {
           <p>I'm a full-stack developer.</p>
         </Heading>
         <Options>
-          <Option smooth to="/#skills">
-            Skills
-          </Option>
           <Option
             smooth
             to="/#projects"
@@ -67,16 +64,19 @@ const Home = () => {
 };
 
 const Wrapper = styled.section`
-  width: 100vw;
+  width: 99vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 `;
 const Content = styled.div`
   display: flex;
-  justify-content: space-around;
-  margin: 0 20%;
+  justify-content: space-between;
+  position:relative;
+  top:10px;
+  width: 55%;
 `;
 const textCursor = keyframes`
 from{
@@ -89,7 +89,7 @@ const Heading = styled.h1`
   align-self: center;
   font-size: 3rem;
   line-height: 3.5rem;
-  margin: 0;
+  margin-top: 5%;
 
   span {
     color: var(--red-pantone);
