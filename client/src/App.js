@@ -41,6 +41,8 @@ function App() {
             ) : (
               <>
                 <Home />
+                <Projects />
+                <About />
               </>
             )}
           </Container>

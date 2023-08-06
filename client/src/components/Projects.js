@@ -10,14 +10,15 @@ const Projects = () => {
           backgroundImage: "url('./assets/Projects/PokeQuest.JPG')",
         }}>
           <Content>
-          <h1>Poke-Quest</h1>
+          <h1>PokeQuest</h1>
           <p>
-            Quest is a social media application which aims to encourage
+            PokeQuest is a social media application which aims to encourage
             interactions outside of social media through gamification. Users are
-            encouraged to level up their pokemons by meeting and socializing
-            with other users in their neighbourhood through quests. Quests can
-            be anything from a request to perform a task together to an
-            invitation to explore a place to simply completing chores together.
+            encouraged to level up their Pokemons by meeting and socializing
+            with other users in their neighbourhood through quests.
+          </p>
+          <p style={{fontStyle: "italic"}}>
+            Note: The app is hosted on a Render free-tier server. Please allow 30 seconds for the web service to spin up.
           </p>
             <Links>
                 <a href="https://poke-quest.onrender.com/" target="_blank">See Live</a>
@@ -31,7 +32,7 @@ const Projects = () => {
           }}>
           <Content>
           <h1>GoGo Ecommerce</h1>
-          <p>Co-contributors: Jade Boutilier, Erez Michael</p>
+          <p style={{fontStyle: "italic"}}><span style={{fontWeight: 500}}>Co-contributors:</span> Jade Boutilier, Erez Michael</p>
           <p>
             An e-commerce page for gadgets where users are able to 1) add items
             to their cart, 2) checkout from their cart and 3) sign in to view
@@ -90,7 +91,7 @@ const Projects = () => {
 };
 
 const Wrapper = styled.section`
-  padding: 10%;
+  padding: 10% 7%;
   background-color: var(--berkeley-blue);
   background-image: linear-gradient(
     130deg,
@@ -105,16 +106,17 @@ const Title = styled.h1`
   text-align: center;
   font-size: 3rem;
   line-height: 3.5rem;
-  margin-bottom: 3%;
+  margin-bottom: 2%;
 `;
 const Grid = styled.section`
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-gap: 5%;
+  grid-gap: 5% 1%;
 `;
 const Block = styled.div`
   background-size: cover;
-  height: 100%;
+  max-width: 95%;
+  height: auto;
 
   h1 {
     font-weight: 500;
@@ -140,6 +142,10 @@ const Content = styled.div`
 
   h1 {
     text-align: center;
+  }
+
+  p {
+    margin-bottom: 5px;
   }
 `;
 const Links = styled.div`

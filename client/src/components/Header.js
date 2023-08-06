@@ -31,7 +31,7 @@ const Header = () => {
         ) : (
           <Cross onClick={() => setRollDown(false)} />
         )}
-        <LanguageSelector />
+        {/* <LanguageSelector /> */}
     </Wrapper>
   );
 };
@@ -41,6 +41,7 @@ const Wrapper = styled.div`
   position: fixed;
   z-index: 1000;
   width: 100%;
+  padding: 10px;
   display: flex;
   justify-content: flex-end;
 `;
@@ -48,13 +49,13 @@ const Links = styled.div`
   display: flex;
   width: 20%;
   justify-content: space-between;
+  align-items: center;
   font-size: 1.8rem;
 `;
 const Option = styled(Link)`
   text-decoration: none;
   text-align: center;
   white-space: nowrap;
-  line-height: 100px;
   width: 100%;
   transition: all 0.35s ease-in-out;
   color: black;
